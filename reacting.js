@@ -25,7 +25,7 @@ client.on('message', message => {
 		.then(() => message.react('759992975769206805'))
         }else {
             message.delete();
-            message.author.send('<@' + user.id + '>' + ', When making a suggestion, make sure that you have "Suggestion:" in front of it. Please read the pinned message in <#' + channel + '>');
+            message.author.send('<@' + user.id + '>' + ', When making a suggestion, make sure that you have "Suggestion:" in front of it. Please read the pinned message in the suggestions channel for more info.');
         }
     }
 });
