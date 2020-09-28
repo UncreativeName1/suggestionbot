@@ -25,10 +25,7 @@ client.on('message', message => {
             message.react('759993041502339102');
         }else {
             message.delete();
-            message.author.send('<@' + user.id + '>' + ', When making a suggestion, make sure that you have "Suggestion:" in front of it. Here are some examples. \n
-✅ `Suggestion: Monster Gaming should do an Among Us video!`\n
-❌ `Monster Gaming should do an Among Us video!`\n
-❌ `Suggestion - Monster Gaming should do an Among Us video!`');
+            message.author.send('<@' + user.id + '>' + ', When making a suggestion, make sure that you have "Suggestion:" in front of it.');
         }
     }
 });
