@@ -30,7 +30,7 @@ client.on('message', message => {
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
-    if (ChannelID !== '755296307702398996') {
+    if (reaction.message.channel.id !== '755296307702398996') {
         return;
     }else {
         if (reaction.emoji.name == '🗑️') { 
