@@ -8,7 +8,6 @@ client.once('ready', () => {
 client.on('message', message => {
     const user = message.author;
     let ChannelID = message.channel.id;
-    let channel = 755296307702398996;
     if(ChannelID !== '755296307702398996') {
         return;
     }else {
@@ -31,18 +30,21 @@ client.on('message', message => {
 });
 
 client.on('messageReactionAdd', (reaction, user) => {
-    if (reaction.emoji.name == '🗑️') { 
-        reaction.message.delete();
-        reaction.message.author.send(`Hey <@${reaction.message.author.id}>, unfortunately your suggestion was rejected. 
+    if (ChannelID !== '755296307702398996') {
+        return;
+    }else {
+        if (reaction.emoji.name == '🗑️') { 
+            reaction.message.delete();
+            reaction.message.author.send(`Hey <@${reaction.message.author.id}>, unfortunately your suggestion was rejected. 
 
 Your ${reaction.message}`);}
-    else if (reaction.emoji.name == '⭐') { 
-        reaction.message.pin();
-        reaction.message.author.send(`Hey <@${reaction.message.author.id}>, your suggestion was accepted! We will be adding your feature into the server very shortly, so stay tuned! 
+        else if (reaction.emoji.name == '⭐') { 
+            reaction.message.pin();
+            reaction.message.author.send(`Hey <@${reaction.message.author.id}>, your suggestion was accepted! We will be adding your feature into the server very shortly, so stay tuned! 
 
 Your ${reaction.message}`);}
-    else return;
-    
+        else return;
+    }
 });
 
 client.login('NzU5OTk4NjQ2NDY4NzM5MTEy.X3Fp5Q.txqfKnHZmke7kxC12K2ybpAj0KA');
