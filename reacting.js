@@ -49,4 +49,4 @@ Your ${reaction.message}`);}
 
 
 
-client.login('NzU5OTk4NjQ2NDY4NzM5MTEy.X3Fp5Q.txqfKnHZmke7kxC12K2ybpAj0KA');
+client.login('TOKEN');
